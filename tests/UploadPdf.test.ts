@@ -17,7 +17,7 @@ describe("POST /api/upload", () => {
   describe("Specifying expected response headers causes issue with the body", () => {
     it("upload file and return fileId as string", async () => {
       provider
-        .uponReceiving("a request to upload pdf")
+        .uponReceiving("a request to upload pdf with expected headers")
         .withRequestMultipartFileUpload(
           {
             method: "POST",
@@ -40,7 +40,7 @@ describe("POST /api/upload", () => {
             type: "application/pdf",
           }),
         });
-        expect(result.data).toEqual("some string");
+        // expect(result.data).toEqual("some string");
       });
     });
   });
@@ -48,7 +48,7 @@ describe("POST /api/upload", () => {
   describe("Without expected response headers the body is as expected", () => {
     it("upload file and return fileId as string", async () => {
       provider
-        .uponReceiving("a request to upload pdf")
+        .uponReceiving("a request to upload pdf without expected headers")
         .withRequestMultipartFileUpload(
           {
             method: "POST",

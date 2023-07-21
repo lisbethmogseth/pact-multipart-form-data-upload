@@ -6,9 +6,105 @@
     {
       "description": "a request to upload pdf",
       "request": {
-        "body": "LS1kZXo0b2I0U1ZTOEtVUVp4DQpDb250ZW50LURpc3Bvc2l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9ImZpbGUiOyBmaWxlbmFtZT0iZW1wdHkucGRmIg0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9wZGYNCg0KJVBERi0xLjQNCiXT6+nhDQoxIDAgb2JqDQo8PC9UaXRsZSAoVW50aXRsZWQgZG9jdW1lbnQpDQovUHJvZHVjZXIgKFNraWEvUERGIG0xMTUgR29vZ2xlIERvY3MgUmVuZGVyZXIpPj4NCmVuZG9iag0KMyAwIG9iag0KPDwvY2EgMQ0KL0JNIC9Ob3JtYWw+Pg0KZW5kb2JqDQo0IDAgb2JqDQo8PC9MZW5ndGggODQ+PiBzdHJlYW0NCjEgMCAwIC0xIDAgNzkyIGNtDQpxDQouNzUgMCAwIC43NSAwIDAgY20NCjEgMSAxIFJHIDEgMSAxIHJnDQovRzMgZ3MNCjAgMCA4MTYgMTA1NiByZQ0KZg0KUQ0KDQplbmRzdHJlYW0NCmVuZG9iag0KMiAwIG9iag0KPDwvVHlwZSAvUGFnZQ0KL1Jlc291cmNlcyA8PC9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQ0KL0V4dEdTdGF0ZSA8PC9HMyAzIDAgUj4+Pj4NCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdDQovQ29udGVudHMgNCAwIFINCi9TdHJ1Y3RQYXJlbnRzIDANCi9QYXJlbnQgNSAwIFI+Pg0KZW5kb2JqDQo1IDAgb2JqDQo8PC9UeXBlIC9QYWdlcw0KL0NvdW50IDENCi9LaWRzIFsyIDAgUl0+Pg0KZW5kb2JqDQo2IDAgb2JqDQo8PC9UeXBlIC9DYXRhbG9nDQovUGFnZXMgNSAwIFI+Pg0KZW5kb2JqDQp4cmVmDQowIDcNCjAwMDAwMDAwMDAgNjU1MzUgZiANCjAwMDAwMDAwMTUgMDAwMDAgbiANCjAwMDAwMDAyNzcgMDAwMDAgbiANCjAwMDAwMDAxMDggMDAwMDAgbiANCjAwMDAwMDAxNDUgMDAwMDAgbiANCjAwMDAwMDA0NjUgMDAwMDAgbiANCjAwMDAwMDA1MjAgMDAwMDAgbiANCnRyYWlsZXINCjw8L1NpemUgNw0KL1Jvb3QgNiAwIFINCi9JbmZvIDEgMCBSPj4NCnN0YXJ0eHJlZg0KNTY3DQolJUVPRg0KDQotLWRlejRvYjRTVlM4S1VRWngtLQ0K",
+        "body": "LS13N0hZeFZxSGh3QkFJSmo2DQpDb250ZW50LURpc3Bvc2l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9ImZpbGUiOyBmaWxlbmFtZT0iZW1wdHkucGRmIg0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9wZGYNCg0KJVBERi0xLjQNCiXT6+nhDQoxIDAgb2JqDQo8PC9UaXRsZSAoVW50aXRsZWQgZG9jdW1lbnQpDQovUHJvZHVjZXIgKFNraWEvUERGIG0xMTUgR29vZ2xlIERvY3MgUmVuZGVyZXIpPj4NCmVuZG9iag0KMyAwIG9iag0KPDwvY2EgMQ0KL0JNIC9Ob3JtYWw+Pg0KZW5kb2JqDQo0IDAgb2JqDQo8PC9MZW5ndGggODQ+PiBzdHJlYW0NCjEgMCAwIC0xIDAgNzkyIGNtDQpxDQouNzUgMCAwIC43NSAwIDAgY20NCjEgMSAxIFJHIDEgMSAxIHJnDQovRzMgZ3MNCjAgMCA4MTYgMTA1NiByZQ0KZg0KUQ0KDQplbmRzdHJlYW0NCmVuZG9iag0KMiAwIG9iag0KPDwvVHlwZSAvUGFnZQ0KL1Jlc291cmNlcyA8PC9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQ0KL0V4dEdTdGF0ZSA8PC9HMyAzIDAgUj4+Pj4NCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdDQovQ29udGVudHMgNCAwIFINCi9TdHJ1Y3RQYXJlbnRzIDANCi9QYXJlbnQgNSAwIFI+Pg0KZW5kb2JqDQo1IDAgb2JqDQo8PC9UeXBlIC9QYWdlcw0KL0NvdW50IDENCi9LaWRzIFsyIDAgUl0+Pg0KZW5kb2JqDQo2IDAgb2JqDQo8PC9UeXBlIC9DYXRhbG9nDQovUGFnZXMgNSAwIFI+Pg0KZW5kb2JqDQp4cmVmDQowIDcNCjAwMDAwMDAwMDAgNjU1MzUgZiANCjAwMDAwMDAwMTUgMDAwMDAgbiANCjAwMDAwMDAyNzcgMDAwMDAgbiANCjAwMDAwMDAxMDggMDAwMDAgbiANCjAwMDAwMDAxNDUgMDAwMDAgbiANCjAwMDAwMDA0NjUgMDAwMDAgbiANCjAwMDAwMDA1MjAgMDAwMDAgbiANCnRyYWlsZXINCjw8L1NpemUgNw0KL1Jvb3QgNiAwIFINCi9JbmZvIDEgMCBSPj4NCnN0YXJ0eHJlZg0KNTY3DQolJUVPRg0KDQotLXc3SFl4VnFIaHdCQUlKajYtLQ0K",
         "headers": {
-          "Content-Type": "multipart/form-data; boundary=dez4ob4SVS8KUQZx"
+          "Content-Type": "multipart/form-data; boundary=w7HYxVqHhwBAIJj6"
+        },
+        "matchingRules": {
+          "body": {
+            "$.file": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "contentType",
+                  "value": "text/plain"
+                }
+              ]
+            }
+          },
+          "header": {
+            "Content-Type": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "regex",
+                  "regex": "multipart/form-data;(\\s*charset=[^;]*;)?\\s*boundary=.*"
+                }
+              ]
+            }
+          }
+        },
+        "method": "POST",
+        "path": "/api/upload"
+      },
+      "response": {
+        "body": "some string",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          }
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "a request to upload pdf with expected headers",
+      "request": {
+        "body": "LS0zc1Z4RjRUd21OSThLaFBNDQpDb250ZW50LURpc3Bvc2l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9ImZpbGUiOyBmaWxlbmFtZT0iZW1wdHkucGRmIg0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9wZGYNCg0KJVBERi0xLjQNCiXT6+nhDQoxIDAgb2JqDQo8PC9UaXRsZSAoVW50aXRsZWQgZG9jdW1lbnQpDQovUHJvZHVjZXIgKFNraWEvUERGIG0xMTUgR29vZ2xlIERvY3MgUmVuZGVyZXIpPj4NCmVuZG9iag0KMyAwIG9iag0KPDwvY2EgMQ0KL0JNIC9Ob3JtYWw+Pg0KZW5kb2JqDQo0IDAgb2JqDQo8PC9MZW5ndGggODQ+PiBzdHJlYW0NCjEgMCAwIC0xIDAgNzkyIGNtDQpxDQouNzUgMCAwIC43NSAwIDAgY20NCjEgMSAxIFJHIDEgMSAxIHJnDQovRzMgZ3MNCjAgMCA4MTYgMTA1NiByZQ0KZg0KUQ0KDQplbmRzdHJlYW0NCmVuZG9iag0KMiAwIG9iag0KPDwvVHlwZSAvUGFnZQ0KL1Jlc291cmNlcyA8PC9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQ0KL0V4dEdTdGF0ZSA8PC9HMyAzIDAgUj4+Pj4NCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdDQovQ29udGVudHMgNCAwIFINCi9TdHJ1Y3RQYXJlbnRzIDANCi9QYXJlbnQgNSAwIFI+Pg0KZW5kb2JqDQo1IDAgb2JqDQo8PC9UeXBlIC9QYWdlcw0KL0NvdW50IDENCi9LaWRzIFsyIDAgUl0+Pg0KZW5kb2JqDQo2IDAgb2JqDQo8PC9UeXBlIC9DYXRhbG9nDQovUGFnZXMgNSAwIFI+Pg0KZW5kb2JqDQp4cmVmDQowIDcNCjAwMDAwMDAwMDAgNjU1MzUgZiANCjAwMDAwMDAwMTUgMDAwMDAgbiANCjAwMDAwMDAyNzcgMDAwMDAgbiANCjAwMDAwMDAxMDggMDAwMDAgbiANCjAwMDAwMDAxNDUgMDAwMDAgbiANCjAwMDAwMDA0NjUgMDAwMDAgbiANCjAwMDAwMDA1MjAgMDAwMDAgbiANCnRyYWlsZXINCjw8L1NpemUgNw0KL1Jvb3QgNiAwIFINCi9JbmZvIDEgMCBSPj4NCnN0YXJ0eHJlZg0KNTY3DQolJUVPRg0KDQotLTNzVnhGNFR3bU5JOEtoUE0tLQ0K",
+        "headers": {
+          "Content-Type": "multipart/form-data; boundary=3sVxF4TwmNI8KhPM"
+        },
+        "matchingRules": {
+          "body": {
+            "$.file": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "contentType",
+                  "value": "text/plain"
+                }
+              ]
+            }
+          },
+          "header": {
+            "Content-Type": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "regex",
+                  "regex": "multipart/form-data;(\\s*charset=[^;]*;)?\\s*boundary=.*"
+                }
+              ]
+            }
+          }
+        },
+        "method": "POST",
+        "path": "/api/upload"
+      },
+      "response": {
+        "body": "{\"pact:matcher:type\":\"type\",\"value\":\"some string\"}",
+        "headers": {
+          "Content-Type": "text/plain;charset=utf-8"
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "a request to upload pdf without expected headers",
+      "request": {
+        "body": "LS04RU9rT25RRjJnWUduV2x6DQpDb250ZW50LURpc3Bvc2l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9ImZpbGUiOyBmaWxlbmFtZT0iZW1wdHkucGRmIg0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9wZGYNCg0KJVBERi0xLjQNCiXT6+nhDQoxIDAgb2JqDQo8PC9UaXRsZSAoVW50aXRsZWQgZG9jdW1lbnQpDQovUHJvZHVjZXIgKFNraWEvUERGIG0xMTUgR29vZ2xlIERvY3MgUmVuZGVyZXIpPj4NCmVuZG9iag0KMyAwIG9iag0KPDwvY2EgMQ0KL0JNIC9Ob3JtYWw+Pg0KZW5kb2JqDQo0IDAgb2JqDQo8PC9MZW5ndGggODQ+PiBzdHJlYW0NCjEgMCAwIC0xIDAgNzkyIGNtDQpxDQouNzUgMCAwIC43NSAwIDAgY20NCjEgMSAxIFJHIDEgMSAxIHJnDQovRzMgZ3MNCjAgMCA4MTYgMTA1NiByZQ0KZg0KUQ0KDQplbmRzdHJlYW0NCmVuZG9iag0KMiAwIG9iag0KPDwvVHlwZSAvUGFnZQ0KL1Jlc291cmNlcyA8PC9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQ0KL0V4dEdTdGF0ZSA8PC9HMyAzIDAgUj4+Pj4NCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdDQovQ29udGVudHMgNCAwIFINCi9TdHJ1Y3RQYXJlbnRzIDANCi9QYXJlbnQgNSAwIFI+Pg0KZW5kb2JqDQo1IDAgb2JqDQo8PC9UeXBlIC9QYWdlcw0KL0NvdW50IDENCi9LaWRzIFsyIDAgUl0+Pg0KZW5kb2JqDQo2IDAgb2JqDQo8PC9UeXBlIC9DYXRhbG9nDQovUGFnZXMgNSAwIFI+Pg0KZW5kb2JqDQp4cmVmDQowIDcNCjAwMDAwMDAwMDAgNjU1MzUgZiANCjAwMDAwMDAwMTUgMDAwMDAgbiANCjAwMDAwMDAyNzcgMDAwMDAgbiANCjAwMDAwMDAxMDggMDAwMDAgbiANCjAwMDAwMDAxNDUgMDAwMDAgbiANCjAwMDAwMDA0NjUgMDAwMDAgbiANCjAwMDAwMDA1MjAgMDAwMDAgbiANCnRyYWlsZXINCjw8L1NpemUgNw0KL1Jvb3QgNiAwIFINCi9JbmZvIDEgMCBSPj4NCnN0YXJ0eHJlZg0KNTY3DQolJUVPRg0KDQotLThFT2tPblFGMmdZR25XbHotLQ0K",
+        "headers": {
+          "Content-Type": "multipart/form-data; boundary=8EOkOnQF2gYGnWlz"
         },
         "matchingRules": {
           "body": {
